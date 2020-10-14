@@ -8,6 +8,9 @@ namespace ConsoleApp4
     class Program
     {
         private static DemandeAutilisateur _demandeAutilisateur = new DemandeAutilisateur();
+
+        public static List<Commune> Communes { get; private set; }
+
         static void Main(string[] args)
         {
             DemandeAutilisateur _demandeAutilisateur = new DemandeAutilisateur();
@@ -33,6 +36,7 @@ namespace ConsoleApp4
                 else if(choix == 3)
                 {
                     _communeService.CreeCommune();
+
                 }
                 else if (choix == 4)
                 {
@@ -44,10 +48,13 @@ namespace ConsoleApp4
                 }
                 else if (choix == 6)
                 {
-                    _departementService.DemandeDepartement();
+                    _departementService.DemandeDepartements();
                     
                 }
-                
+                else if (choix == 7)
+                {
+                    _communeService.calculNbtotalHabs(Communes);
+                }
 
             }
         }
@@ -60,6 +67,7 @@ namespace ConsoleApp4
             Console.WriteLine("4. Afficher les communes");
             Console.WriteLine("5. Créer un departement");
             Console.WriteLine("6. Afficher un departement");
+            Console.WriteLine("7. Afficher le nombre total d'habitants");
             Console.WriteLine("Q. Quitter");
             int choixUtilisateur = _demandeAutilisateur.saisieEntier("");
             return choixUtilisateur;

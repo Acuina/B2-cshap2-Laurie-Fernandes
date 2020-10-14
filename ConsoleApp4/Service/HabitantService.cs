@@ -24,9 +24,10 @@ namespace ConsoleApp4.Service
         {
             foreach (Habitant h in ListeHabitants)
             {
+                Console.WriteLine("**************");
                 Console.WriteLine(h.nom);
                 Console.WriteLine("Les communes: ");
-
+                
                 if (h.Communes != null)
                 {
                     foreach (Commune c in h.Communes)
@@ -34,14 +35,17 @@ namespace ConsoleApp4.Service
                         Console.WriteLine(c.Nom);
                     }
                 }
+                Console.WriteLine("**************");
             }
            
         }
         public Habitant CreatHabitants()
         {
+            
             Habitant h = new Habitant();
             h.nom = _demandeAutilisateur.saisieNom("Nom de l'habitant :");
-            h.age = _demandeAutilisateur.saisieEntier("Quel age as tu :");
+            h.age = _demandeAutilisateur.saisieEntier("Quel age as t'il ? :");
+
             ListeHabitants.Add(h);
             return h;
         }
