@@ -16,9 +16,10 @@ namespace ConsoleApp4.Service
         public Departement CreeDepartement()
         {
             Departement d = new Departement();
-            d.nom = _demandeAutilisateur.saisieNom("Nom de departement");
-            d.numD = _demandeAutilisateur.saisieEntier("Numero du departement");
-            d.nbreH = _demandeAutilisateur.saisieEntier("Nombre d'habitants");
+            d.nom = _demandeAutilisateur.saisieNom("Nom de departement : ");
+            d.numD = _demandeAutilisateur.saisieEntier("Numero du departement : ");
+            d.nbreH = _demandeAutilisateur.saisieEntier("Nombre d'habitants : ");
+            d.NomR = _demandeAutilisateur.saisieNom("Région : ");
             departements.Add(d);
             return d;
         }
@@ -40,6 +41,8 @@ namespace ConsoleApp4.Service
                             Console.WriteLine(d.nom);
                             Console.WriteLine("Numero du département : ");
                             Console.WriteLine(d.numD);
+                            Console.WriteLine("Région : ");
+                            Console.WriteLine(d.NomR);
                             Console.WriteLine("Nombre d'habitants : ");
                             Console.WriteLine(d.nbreH);
                             Console.WriteLine("**************");

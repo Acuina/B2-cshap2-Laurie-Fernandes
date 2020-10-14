@@ -28,7 +28,7 @@ namespace ConsoleApp4.Service
             Communes.Add(result);
             return result;
         }
-       /* public void calculNbtotalHabs(List<Commune> Communes)
+        public void calculNbtotalHabs(List<Commune> Communes)
         {
             int Nbtot = 0;
             foreach (Commune c in Communes)
@@ -65,7 +65,7 @@ namespace ConsoleApp4.Service
         internal void calculNbtotalHabs(object communes)
         {
             throw new NotImplementedException();
-        } */
+        } 
     }
 }
 
